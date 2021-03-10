@@ -11,6 +11,7 @@ RUN npm run build
 
 # Create the nginx server and connect the two
 FROM nginx
+EXPOSE 80
 
 # Copy from the first part (0) 
 COPY --from=0 /app/build /usr/share/nginx/html
